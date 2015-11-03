@@ -1,0 +1,19 @@
+{
+  "name": "ses-mock",
+  "description": "Mock server for AWS SES testing",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TeamPraxis/ses-mock.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "mkdirp": "0.5.1",
+    "nconf": "0.8.2",
+    "node-uuid": "1.4.3"
+  }
+}
