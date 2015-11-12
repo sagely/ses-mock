@@ -55,7 +55,7 @@ app.use(function (req, res) {
     // save the email to the output folder
     try {
       mkdirp.sync(output + '/' + id);
-      fs.writeFileSync(output + '/' + id + '/content.txt', new Buffer(req.body['RawMessage.Data'], 'base64').toString());
+      fs.writeFileSync(output + '/' + id + '/content.eml', new Buffer(req.body['RawMessage.Data'], 'base64').toString());
       res.status(200).send(responseTemplate.replace('@@@messageId@@@', id));
     } catch (err) {
       console.log('Error saving email', err);
