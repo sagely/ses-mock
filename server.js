@@ -62,7 +62,7 @@ app.use(function (req, res) {
       res.status(500).send(errorTemplate.replace('@@@code@@@', 'MessageRejected').replace('@@@message@@@', err.message));
     }
   } else {
-    res.status(400).send('Invalid action: ' + req.body.Action);
+    res.status(400).send(errorTemplate.replace('@@@code@@@', 'InvalidAction').replace('@@@message@@@', 'Invalid action: ' + req.body.Action));
   }
 });
 
