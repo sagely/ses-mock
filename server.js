@@ -44,6 +44,9 @@ app.use(function (req, res) {
       fs.writeFileSync(output + '/' + id + '/subject.txt', req.body['Message.Subject.Data']);
       fs.writeFileSync(output + '/' + id + '/destination.txt', req.body['Destination.ToAddresses.member.1']);
       fs.writeFileSync(output + '/' + id + '/source.txt', req.body.Source);
+      if (req.body['ReplyToAddresses.member.1']) {
+        fs.writeFileSync(output + '/' + id + '/replyTo.txt', req.body['ReplyToAddresses.member.1']);
+      }
       res.status(200).send(responseTemplate.replace('@@@messageId@@@', id));
     } catch (err) {
       console.log('Error saving email', err);
