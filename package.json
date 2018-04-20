@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:TeamPraxis/ses-mock.git"
+    "url": "git@github.com:sagely/ses-mock.git"
   },
   "scripts": {
     "start": "node server.js"
