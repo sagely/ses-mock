@@ -3,4 +3,7 @@
   <SendEmailResult>
     <MessageId>@@@messageId@@@</MessageId>
   </SendEmailResult>
+  <SendRawEmailResult>
+    <MessageId>@@@messageId@@@</MessageId>
+  </SendRawEmailResult>
 </SendEmailResponse>

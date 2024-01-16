@@ -47,7 +47,7 @@ app.use(function (req, res) {
       if (req.body['ReplyToAddresses.member.1']) {
         fs.writeFileSync(output + '/' + id + '/replyTo.txt', req.body['ReplyToAddresses.member.1']);
       }
-      res.status(200).send(responseTemplate.replace('@@@messageId@@@', id));
+      res.status(200).send(responseTemplate.replace(/@@@messageId@@@/g, id));
     } catch (err) {
       console.log('Error saving email', err);
       res.status(500).send(errorTemplate.replace('@@@code@@@', 'MessageRejected').replace('@@@message@@@', err.message));
